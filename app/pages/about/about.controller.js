@@ -1,19 +1,15 @@
-;(function () {
-  'use strict'
+(function () {
+  "use strict";
 
-  angular.module('app').controller('About', About)
+  angular.module("app").controller("AboutController", AboutCtrl);
 
-  About.$inject = ['$scope']
+  AboutCtrl.$inject = ["$scope"];
 
-  function About($scope) {
-    var vm = $scope
+  function AboutCtrl($scope) {
+    var vm = $scope;
 
-    init()
+    init();
 
-    function init() {
-
-      
-
-    }
+    function init() {}
   }
-})()
+})();

@@ -1,28 +1,33 @@
-;(function () {
-  'use strict'
+(function () {
+  "use strict";
 
-  angular.module('app', ['ui.router']).config(routerConfig)
+  const app = angular.module("app", ["ui.router"]);
 
-  function routerConfig($stateProvider, $urlRouterProvider) {
+  app.config(routerConfig);
+
+  routerConfig.$inject = ["$stateProvider"];
+
+  function routerConfig($stateProvider) {
     $stateProvider
-      .state('home', {
-        url: '/home',
-        templateUrl: 'app/pages/home/home.html',
-        controller: 'HomeController',
-        controllerAs: 'home',
+      .state("home", {
+        url: "/home",
+        templateUrl: "app/pages/home/home.html",
+        controller: "HomeController",
       })
-      .state('about', {
-        url: '/about',
-        templateUrl: 'app/pages/about/about.html',
-        controller: 'AboutController',
-        controllerAs: 'about',
+      .state("about", {
+        url: "/about",
+        templateUrl: "app/pages/about/about.html",
+        controller: "AboutController",
       })
-      .state('error', {
-        url: '/404',
-        templateUrl: 'app/pages/error/error.html',
-        controller: 'ErrorController',
-        controllerAs: 'Error',
+      .state("login", {
+        url: "/login",
+        templateUrl: "app/pages/login/login.html",
+        controller: "LoginController",
       })
-    $urlRouterProvider.otherwise('/home')
+      .state("error", {
+        url: "/error",
+        templateUrl: "app/pages/error/error.html",
+        controller: "ErrorController",
+      });
   }
-})()
+})();

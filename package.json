@@ -5,9 +5,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
-    "@uirouter/angularjs": "^0.2.17",
     "angular": "^1.8.3",
-    "angular-animate": "^1.8.3",
+    "angular-ui-router": "^0.3.2",
     "bootstrap": "^5.2.3"
   }
 }

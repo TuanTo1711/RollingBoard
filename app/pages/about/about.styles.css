@@ -1,0 +1,35 @@
+.about_content {
+  position: relative;
+  text-align: center;
+}
+
+.Sign-up {
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  width: 22%;
+  height: 25%;
+  border: 1px solid #e4e4e4;
+}
+
+.colum-center {
+  background: linear-gradient(270deg, #101113 0%, rgba(16, 17, 19, 0) 100%);
+  border-radius: 0px 17px 17px 0px;
+  width: 488px;
+  height: 193px;
+  margin-left: 600px;
+}
+
+.button-heard {
+  background: linear-gradient(88.61deg, #4c6ef5 0.31%, #15aabf 99.5%);
+}
+
+.button-conter {
+  background: linear-gradient(88.61deg, #12b886 0.31%, #82c91e 99.5%);
+}
+
+.button-footer {
+  background: linear-gradient(88.61deg, #fd7e14 0.31%, #fa5252 99.5%);
+}/*# sourceMappingURL=about.styles.css.map */

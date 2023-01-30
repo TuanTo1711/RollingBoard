@@ -1,87 +1,92 @@
 <!-- Slider -->
-<div class="slider text-center">
-  <div class="__content">
-    <p class="__name">Project Manager App</p>
-    <p class="__title text-break">Colaborate and build faster, together.</p>
-    <p class="__detail text-muted text-break">
-      Create, share, and get feedback with collaborative boards for rapid
-      development.
-    </p>
-    <button ui-sref="404" class="btn btn-primary">Create Kanban Board</button>
-  </div>
-</div>
-
-<!-- Content -->
-<div class="content">
-  <div class="content-feature">
-    <div class="content-feature_card">
-      <img src="{{IntegrateIcon}}" alt="IntegrateIcon..." />
-      <h6>Integrate</h6>
-      <p>
-        The ability to quickly set up and customize workflows for just about
-        anything.
+<div ng-controller="HomeController">
+  <div class="slider text-center">
+    <div class="__content">
+      <p class="__name">Project Manager App</p>
+      <p class="__title text-break">Colaborate and build faster, together.</p>
+      <p class="__detail text-muted text-break">
+        Create, share, and get feedback with collaborative boards for rapid
+        development.
       </p>
-    </div>
-    <div class="content-feature_card">
-      <img src="{{ColaborateIcon}}" alt="ColaborateIcon..." />
-      <h6>Colaborate</h6>
-      <p>
-        Manage projects, organize tasks, and build team spirit—all in one place.
-      </p>
-    </div>
-    <div class="content-feature_card">
-      <img src="{{SucceedIcon}}" alt="SucceedIcon..." />
-      <h6>Succeed</h6>
-      <p>
-        Every single part of your task can be managed, tracked, and shared with
-        teammates.
-      </p>
-    </div>
-  </div>
-  <div class="content-overview">
-    <div class="text-block">
-      <p class="title">
-        <img src="{{CheckIcon}}" alt="" />
-        <span class="ms-1">Universal</span>
-      </p>
-      <h1>Build the workflow you want</h1>
-      <p>
-        Manage your boards using Drag-n-Drop, create adittional boards and
-        tasks.
-      </p>
-    </div>
-    <div class="img-block col-lg-auto">
-      <img src="{{ProjectOverview}}" alt="" />
+      <button ui-sref="login" class="btn btn-primary">
+        Create Kanban Board
+      </button>
     </div>
   </div>
 
-  <div class="content-overview">
-    <div class="img-block">
-      <img src="{{PackageOverview}}" alt="" />
+  <!-- Content -->
+  <div class="content">
+    <div class="content-feature">
+      <div class="content-feature_card">
+        <img src="{{IntegrateIcon}}" alt="IntegrateIcon..." />
+        <h6>Integrate</h6>
+        <p>
+          The ability to quickly set up and customize workflows for just about
+          anything.
+        </p>
+      </div>
+      <div class="content-feature_card">
+        <img src="{{ColaborateIcon}}" alt="ColaborateIcon..." />
+        <h6>Colaborate</h6>
+        <p>
+          Manage projects, organize tasks, and build team spirit—all in one
+          place.
+        </p>
+      </div>
+      <div class="content-feature_card">
+        <img src="{{SucceedIcon}}" alt="SucceedIcon..." />
+        <h6>Succeed</h6>
+        <p>
+          Every single part of your task can be managed, tracked, and shared
+          with teammates.
+        </p>
+      </div>
+    </div>
+    <div class="content-overview">
+      <div class="text-block">
+        <p class="title">
+          <img src="{{CheckIcon}}" alt="" />
+          <span class="ms-1">Universal</span>
+        </p>
+        <h1>Build the workflow you want</h1>
+        <p>
+          Manage your boards using Drag-n-Drop, create adittional boards and
+          tasks.
+        </p>
+      </div>
+      <div class="img-block col-lg-auto">
+        <img src="{{ProjectOverview}}" alt="" />
+      </div>
     </div>
 
-    <div class="text-block my-auto">
-      <p class="title">
-        <img src="{{CheckIcon}}" alt="" />
-        <span class="ms-1">Optimized</span>
-      </p>
-      <h1 class="text-break">Everything you need in one place</h1>
-      <p class="text-break">
-        You can specify additional info in task description and assign users.
-      </p>
+    <div class="content-overview">
+      <div class="img-block">
+        <img src="{{PackageOverview}}" alt="" />
+      </div>
+
+      <div class="text-block my-auto">
+        <p class="title">
+          <img src="{{CheckIcon}}" alt="" />
+          <span class="ms-1">Optimized</span>
+        </p>
+        <h1 class="text-break">Everything you need in one place</h1>
+        <p class="text-break">
+          You can specify additional info in task description and assign users.
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="content-overview">
-    <div class="text-block my-auto">
-      <p class="title">
-        <img class="mb-2" src="{{CheckIcon}}" alt="" />
-        <span class="ms-1">Unlimited</span>
-      </p>
-      <h1 class="text-break">No limits for all users.</h1>
-      <p class="text-break">Unlimited kanban boards, columns and tasks.</p>
-    </div>
-    <div class="img-block">
-      <img src="{{SignUpOverview}}" alt="" />
+    <div class="content-overview">
+      <div class="text-block my-auto">
+        <p class="title">
+          <img class="mb-2" src="{{CheckIcon}}" alt="" />
+          <span class="ms-1">Unlimited</span>
+        </p>
+        <h1 class="text-break">No limits for all users.</h1>
+        <p class="text-break">Unlimited kanban boards, columns and tasks.</p>
+      </div>
+      <div class="img-block">
+        <img src="{{SignUpOverview}}" alt="" />
+      </div>
     </div>
   </div>
 </div>

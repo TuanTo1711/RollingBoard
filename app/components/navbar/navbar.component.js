@@ -13,13 +13,13 @@
       function init() {
         vm.Logo = "app/assets/icon/favicon.svg";
       }
-      
-      // kiem tra neu da dang nhap 
+
+      // kiem tra neu da dang nhap
       /* chua hoan thanh */
     }
 
     return {
-      bindings: {},
+      // bindings: {},
       templateUrl: "app/components/navbar/navbar.html",
       controller: uiNavbarController,
       controllerAs: "${NavbarCtrl}",

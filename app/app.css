@@ -1,6 +1,18 @@
 @import url("pages/home/home.styles.css");
 @import url("pages/error/error.styles.css");
+@import url("pages/login/login.styles.css");
+@import url("pages/about/about.styles.css");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  position: relative;
   overflow-x: hidden;
 }
 body::-webkit-scrollbar {
@@ -8,7 +20,7 @@ body::-webkit-scrollbar {
   background-color: #000000;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 body::-webkit-scrollbar-thumb:hover {
   background-color: #555;
@@ -29,7 +41,7 @@ body::-webkit-scrollbar-thumb:hover {
   align-items: center;
   gap: 10px;
   z-index: 99999;
-  height: 64px;
+  min-height: 64px;
   background-color: #000;
   opacity: 1;
   border-bottom: 1px solid #25262b;
