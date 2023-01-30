@@ -1,0 +1,58 @@
+<header class="navbar navbar-expand navbar-dark header">
+  <div class="container">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbar_header"
+      aria-controls="navbar_header"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="navbar-toggler-icon"></i>
+    </button>
+    <div
+      class="collapse navbar-collapse justify-content-between"
+      id="navbar_header"
+    >
+      <a ui-sref="home" class="navbar-brand" role="button">
+        <img src="{{Logo}}" alt="" />
+        Rolling Board
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item" role="button">
+          <a role="button" class="nav-link p-md-3 p-sm-2" ui-sref="about">
+            About
+          </a>
+        </li>
+        <li class="nav-item dropdown p-sm-2">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="true"
+          >
+            English
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li role="button" class="dropdown-item">English</li>
+            <li class="dropdown-divider"></li>
+            <li role="button" class="dropdown-item">Vietnamese</li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav bs5na">
+        <li class="nav-item mx-3 d-sm-inline-block">
+          <button ui-sref="error" class="btn btn-outline-dark text-light">
+            Login
+          </button>
+        </li>
+        <li class="nav-item d-sm-inline-block">
+          <button ui-sref="signup" class="btn btn-outline-light">
+            Sign up
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

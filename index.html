@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="app/assets/icon/favicon.svg"
+      type="image/x-icon"
+    />
+    <title>Project Management App</title>
+
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.css"
+    />
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script src="node_modules/angular/angular.min.js"></script>
+
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+
+    <link rel="stylesheet" href="app/app.css" />
+
+    <script type="text/javascript" src="/app/app.module.js"></script>
+    <script type="text/javascript" src="/app/app.routes.js"></script>
+    <script
+      type="text/javascript"
+      src="/app/components/navbar/navbar.component.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/app/components/footer/footer.component.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/app/pages/home/home.controller.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/app/pages/about/about.controller.js"
+    ></script>
+  </head>
+  <body class="bg-black text-white">
+    <ui-navbar></ui-navbar>
+    <div class="container">
+      <ui-view></ui-view>
+      <ui-footer></ui-footer>
+    </div>
+  </body>
+</html>
