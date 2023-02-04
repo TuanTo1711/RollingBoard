@@ -5,6 +5,22 @@
   height: fit-content;
   margin-bottom: 2.5rem;
 }
+.about::before {
+  background: linear-gradient(180deg, #ff6161 0%, #43ffdd 35.88%, #45bcff 67.65%, #d795ff 100%);
+  position: absolute;
+  z-index: 0;
+  content: "";
+  top: 0;
+  left: -70%;
+  width: 80%;
+  height: 80%;
+  mix-blend-mode: soft-light;
+  filter: blur(100px);
+  transform: matrix(0.87, -0.5, -0.5, -0.87, 0, 0);
+  mix-blend-mode: normal;
+  border-radius: 200px;
+  transform: rotate(150deg);
+}
 .about__cards {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -20,8 +36,8 @@
   flex-direction: column;
   justify-content: center;
   row-gap: 8px;
-  width: 488px;
-  height: 193px;
+  max-width: 488px;
+  max-height: 193px;
   padding: 20px 40px;
   background: linear-gradient(270deg, #101113 0%, rgba(16, 17, 19, 0) 100%);
   border-radius: 17px;

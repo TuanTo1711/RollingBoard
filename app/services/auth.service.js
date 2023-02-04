@@ -3,16 +3,18 @@
 
   angular.module("app").service("AuthService", AuthService);
 
-  AuthService.$inject = ["$q"];
+  AuthService.$inject = ["$q", "UserService"];
 
-  function AuthService($q) {
+  function AuthService($q, UserService) {
     this.login = login;
     this.logout = logout;
 
     function login(username, password) {
       var deferred = $q.defer();
-      // Xử lý logic đăng nhập tại đây, ví dụ kiểm tra username và password có trùng khớp với các giá trị đã được lưu trữ trước đó
-      if (username === "user" && password === "123456") {
+
+      var data = UserService.findUser(username, password);
+
+      if (!!data) {
         sessionStorage.setItem("isAuthenticated", true);
         deferred.resolve(sessionStorage.getItem("isAuthenticated"));
       } else {
@@ -20,6 +22,7 @@
           message: "Invalid username or password",
         });
       }
+
       return deferred.promise;
     }
 

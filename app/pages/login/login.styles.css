@@ -3,10 +3,11 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vh;
   border-radius: 4px;
+  padding: 100px 0;
 }
 ._container::before {
   position: absolute;
@@ -16,18 +17,17 @@
   transform: rotate(205deg);
   content: "";
   top: 0px;
-  right: -950px;
+  left: -70%;
   width: 1000px;
   height: 1000px;
   border-radius: 208px;
-  isolation: isolate;
 }
 ._container .description {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 436px;
+  max-width: 436px;
 }
 ._container .description span {
   display: inline-flex;
@@ -45,7 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 460px;
+  min-width: 450px;
   min-height: 406px;
   padding: 60px 40px;
   background: #101113;
@@ -66,6 +66,7 @@
   width: 100%;
 }
 ._container .form__container .form .heading {
+  padding-bottom: 15px;
   font-weight: 400;
   font-size: 20px;
   line-height: 155%;

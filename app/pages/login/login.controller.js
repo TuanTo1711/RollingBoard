@@ -3,9 +3,9 @@
 
   angular.module("app").controller("LoginController", LoginController);
 
-  LoginController.$inject = ["$state", "AuthService"];
+  LoginController.$inject = ["$state", "AuthService", "UserService"];
 
-  function LoginController($state, AuthService) {
+  function LoginController($state, AuthService, UserService) {
     var ctrl = this;
     ctrl.login = login;
     ctrl.logout = logout;
@@ -20,10 +20,13 @@
     function login() {
       AuthService.login(ctrl.username, ctrl.password)
         .then(function (response) {
-          $state.go("home");
+          if (response) {
+            $state.go("home");
+          }
         })
         .catch(function (error) {
           ctrl.error = error.data;
+          console.log(error.message);
         });
     }
 

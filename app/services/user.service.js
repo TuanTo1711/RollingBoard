@@ -1,22 +1,36 @@
-class User {
-  constructor(username, password) {
-    this.username = username;
-    this.password = password;
-  }
-}
-
 (function () {
   "use strict";
 
-  angular.module("app").service("UserService", UserService);
+  angular.module("app").service("UserService", function ($http) {
+    var service = this;
+    var users = {};
 
-  /** @ngInject */
-  function UserService() {
+    $http.get("data/users.json").then((response) => (users = response.data));
 
-    this.findUser = findUser;
+    service.findUser = function (username, password) {
+      return users.find(function (user) {
+        return user.username === username && user.password === password;
+      });
+    };
 
-    function findUser() {}
-  }
+    service.addUser = function (user) {
+      users.push(user);
+      $http({
+        method: "POST",
+        url: "localhost:3000/data/users.json",
+        data: user,
+      });
+      return $http.put("data/users.json", users);
+    };
+
+    service.deleteUser = function (user) {
+      return service.getUsers().then(function (data) {
+        var index = data.indexOf(user);
+        if (index > -1) {
+          data.splice(index, 1);
+        }
+        return $http.put("data/users.json", users);
+      });
+    };
+  });
 })();
-
-export default User;
