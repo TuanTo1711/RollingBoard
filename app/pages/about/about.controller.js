@@ -1,15 +1,17 @@
 (function () {
   "use strict";
 
-  angular.module("app").controller("AboutController", AboutCtrl);
+  angular.module("app").controller("AboutController", AboutController);
 
-  AboutCtrl.$inject = ["$scope"];
+  AboutController.$inject = ["$scope"];
 
-  function AboutCtrl($scope) {
-    var vm = $scope;
+  function AboutController($scope) {
+    var ctrl = $scope;
 
     init();
 
-    function init() {}
+    function init() {
+      ctrl.VectorIcon = "app/assets/icon/Vector.svg";
+    }
   }
 })();

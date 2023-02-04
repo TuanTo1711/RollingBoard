@@ -1,4 +1,4 @@
-<header class="navbar navbar-expand navbar-dark header">
+<nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark nav__header">
   <div class="container">
     <button
       class="navbar-toggler"
@@ -16,43 +16,76 @@
       id="navbar_header"
     >
       <a ui-sref="home" class="navbar-brand" role="button">
-        <img src="{{Logo}}" alt="" />
+        <img src="{{vm.Logo}}" alt="" />
         Rolling Board
       </a>
-      <ul class="navbar-nav">
+      <ul class="navbar-nav flex-row justify-content-between">
+        <li class="nav-item" ng-if="vm.isAuthenticated()" role="button">
+          <a role="button" class="nav-link p-md-3 p-sm-2"> Projects </a>
+        </li>
+        <li class="nav-item" ng-if="vm.isAuthenticated()" role="button">
+          <a role="button" class="nav-link p-md-3 p-sm-2"> Profile </a>
+        </li>
+        <li class="nav-item" ng-if="vm.isAuthenticated()" role="button">
+          <a role="button" class="nav-link p-md-3 p-sm-2"> Search </a>
+        </li>
         <li class="nav-item" role="button">
           <a role="button" class="nav-link p-md-3 p-sm-2" ui-sref="about">
             About
           </a>
         </li>
-        <li class="nav-item dropdown p-sm-2">
+        <li
+          class="nav-item dropdown dropdown-center"
+          style="position: relative"
+        >
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle dropdown-toggle-split p-md-3 p-sm-2"
             role="button"
             data-bs-toggle="dropdown"
-            aria-expanded="true"
+            aria-expanded="false"
           >
             English
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark">
+          <ul
+            class="dropdown-menu dropdown-menu-dark"
+            style="position: absolute"
+          >
             <li role="button" class="dropdown-item">English</li>
             <li class="dropdown-divider"></li>
             <li role="button" class="dropdown-item">Vietnamese</li>
           </ul>
         </li>
       </ul>
-      <ul class="navbar-nav bs5na">
-        <li class="nav-item mx-3 d-sm-inline-block">
+      <ul class="list-inline m-0">
+        <li
+          ng-if="!vm.isAuthenticated()"
+          class="list-inline-item d-sm-inline-flex"
+        >
           <button ui-sref="login" class="btn btn-outline-dark text-light">
             Login
           </button>
         </li>
-        <li class="nav-item d-sm-inline-block">
+        <li
+          ng-if="!vm.isAuthenticated()"
+          class="list-inline-item d-sm-inline-flex"
+        >
           <button ui-sref="signup" class="btn btn-outline-light">
             Sign up
+          </button>
+        </li>
+        <li
+          ng-if="vm.isAuthenticated()"
+          class="list-inline-item d-sm-inline-flex"
+        >
+          <button
+            ui-sref="home"
+            ng-click="vm.logout()"
+            class="btn btn-outline-dark text-light"
+          >
+            Sign out
           </button>
         </li>
       </ul>
     </div>
   </div>
-</header>
+</nav>

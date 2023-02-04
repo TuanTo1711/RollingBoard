@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
-  height: 100vh;
+  height: 79vh;
 }
 .main_content::before {
   position: absolute;

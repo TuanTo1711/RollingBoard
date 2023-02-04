@@ -11,8 +11,20 @@
   </div>
 
   <div class="form__container">
-    <form id="LoginForm" class="form" ng-submit="LoginCtrl.login()">
-      <span class="heading">Log in to your account</span>
+    <form id="LoginForm" class="form">
+      <span class="heading">Sign up</span>
+
+      <div class="form-group">
+        <label for="Name" class="text-muted form-label">Name</label>
+        <input
+          id="Name"
+          name="Name"
+          type="text"
+          placeholder="Enter your name..."
+          class="bg-dark text-light form-control"
+          required
+        />
+      </div>
 
       <div class="form-group">
         <label for="username" class="text-muted form-label">Username</label>
@@ -20,30 +32,31 @@
           id="username"
           name="username"
           type="text"
-          placeholder="Enter your username"
+          placeholder="Enter your username..."
           class="bg-dark text-light form-control"
-          ng-model="LoginCtrl.username"
+          required
         />
       </div>
+
       <div class="form-group">
         <label for="password" class="text-muted form-label">Password</label>
         <input
           id="password"
           name="password"
           type="password"
-          placeholder="Enter your password"
+          placeholder="Enter your password..."
           class="bg-dark text-light form-control"
-          ng-model="LoginCtrl.password"
         />
       </div>
+
       <div class="form-inline">
-        <label class="text-muted form-label"
-          >Don't have an account?
-          <a class="_link" ui-sref="signup">Sign Up</a></label
+        <label for="username" class="text-muted form-label"
+          >Already have an account?
+          <a class="_link" ui-sref="login">Login</a></label
         >
       </div>
       <div class="form-group">
-        <button class="btn btn-secondary form-submit">Login</button>
+        <button class="btn btn-secondary form-submit">Create an account</button>
       </div>
     </form>
   </div>

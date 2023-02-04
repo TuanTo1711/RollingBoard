@@ -1,28 +1,27 @@
 (function () {
   "use strict";
 
-  angular.module("app").component("uiNavbar", uiNavbar());
+  angular.module("app").component("uiNavbar", Navbar());
 
-  uiNavbar.$inject = ["$scope"];
+  Navbar.$inject = ["AuthService"];
 
-  function uiNavbar() {
-    function uiNavbarController($scope) {
-      var vm = $scope;
+  function Navbar() {
+    function NavbarController(AuthService) {
+      const vm = this;
 
       init();
+      vm.isAuthenticated = AuthService.isAuthenticated;
+      vm.logout = AuthService.logout;
+
       function init() {
         vm.Logo = "app/assets/icon/favicon.svg";
       }
-
-      // kiem tra neu da dang nhap
-      /* chua hoan thanh */
     }
 
     return {
-      // bindings: {},
       templateUrl: "app/components/navbar/navbar.html",
-      controller: uiNavbarController,
-      controllerAs: "${NavbarCtrl}",
+      controller: NavbarController,
+      controllerAs: "vm",
     };
   }
 })();

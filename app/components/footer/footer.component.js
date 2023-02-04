@@ -16,7 +16,7 @@
     }
 
     return {
-      // bindings: {},
+      bindings: {},
       templateUrl: "app/components/footer/footer.html",
       controller: uiFooterController,
       controllerAs: "${FooterCtrl}",

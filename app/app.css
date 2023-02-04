@@ -2,7 +2,9 @@
 @import url("pages/error/error.styles.css");
 @import url("pages/login/login.styles.css");
 @import url("pages/about/about.styles.css");
-* {
+*,
+::after,
+::before {
   padding: 0;
   margin: 0;
 }
@@ -14,6 +16,12 @@ html {
 body {
   position: relative;
   overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 body::-webkit-scrollbar {
   width: 0.2em;
@@ -26,15 +34,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
 
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0;
-}
-
-.header {
+.nav__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

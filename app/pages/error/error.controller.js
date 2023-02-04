@@ -6,7 +6,7 @@
   ErrorCtrl.$inject = ["$scope"];
 
   function ErrorCtrl($scope) {
-    var vm = $scope;
+    var ctrl = $scope;
 
     init();
 
