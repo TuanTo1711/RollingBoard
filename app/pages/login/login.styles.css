@@ -1,13 +1,13 @@
 ._container {
   overflow: hidden;
-  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  border-radius: 4px;
+  width: 100%;
   padding: 100px 0;
+  border-radius: 4px;
 }
 ._container::before {
   position: absolute;
@@ -16,10 +16,10 @@
   filter: blur(132.344px);
   transform: rotate(205deg);
   content: "";
-  top: 0px;
-  left: -70%;
-  width: 1000px;
-  height: 1000px;
+  top: -10%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
   border-radius: 208px;
 }
 ._container .description {
@@ -45,8 +45,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 450px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 450px;
   min-height: 406px;
+  width: 100%;
   padding: 60px 40px;
   background: #101113;
   border: 1px solid #343a40;
@@ -62,9 +66,6 @@
   align-self: center;
   row-gap: 16px;
 }
-._container .form__container .form > * {
-  width: 100%;
-}
 ._container .form__container .form .heading {
   padding-bottom: 15px;
   font-weight: 400;
@@ -72,9 +73,7 @@
   line-height: 155%;
 }
 ._container .form__container .form .form-group {
-  display: flex;
-  flex-direction: column;
-  row-gap: 6px;
+  align-self: stretch;
 }
 ._container .form__container .form .form-label {
   text-align: left;
@@ -85,7 +84,4 @@
 }
 ._container .form__container .form ._link:hover {
   color: white;
-}
-._container .form__container .form .form-submit {
-  align-self: center;
 }/*# sourceMappingURL=login.styles.css.map */

@@ -34,10 +34,7 @@
             About
           </a>
         </li>
-        <li
-          class="nav-item dropdown dropdown-center"
-          style="position: relative"
-        >
+        <li class="nav-item dropdown-center">
           <a
             class="nav-link dropdown-toggle dropdown-toggle-split p-md-3 p-sm-2"
             role="button"
@@ -78,14 +75,17 @@
           class="list-inline-item d-sm-inline-flex"
         >
           <button
-            ui-sref="home"
-            ng-click="vm.logout()"
-            class="btn btn-outline-dark text-light"
+            class="btn btn-outline-secondary"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offProfileCanvas"
+            aria-controls="offProfileCanvas"
           >
-            Sign out
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
           </button>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+<offcanvas></offcanvas>

@@ -31,47 +31,26 @@
 
     <link rel="stylesheet" href="app/app.css" />
 
-    <script type="text/javascript" src="/app/app.js"></script>
+    <script src="/app/app.js"></script>
 
-    <script
-      type="text/javascript"
-      src="/app/components/navbar/navbar.component.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/app/components/footer/footer.component.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/app/pages/home/home.controller.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/app/pages/login/login.controller.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/app/pages/signup/signup.controller.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/app/pages/about/about.controller.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/app/pages/board/board.controller.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="/app/pages/error/error.controller.js"
-    ></script>
+    <script src="/app/components/navbar/navbar.component.js"></script>
+    <script src="/app/components/footer/footer.component.js"></script>
+    <script src="/app/components/offcanvas/offcanvas.component.js"></script>
+
+    <script src="/app/pages/home/home.controller.js"></script>
+    <script src="/app/pages/login/login.controller.js"></script>
+    <script src="/app/pages/signup/signup.controller.js"></script>
+    <script src="/app/pages/about/about.controller.js"></script>
+    <script src="/app/pages/board/board.controller.js"></script>
+    <script src="/app/pages/error/error.controller.js"></script>
+
     <script src="app/services/auth.service.js"></script>
     <script src="app/services/user.service.js"></script>
   </head>
   <body class="bg-black text-white">
     <ui-navbar class="align-self-stretch"></ui-navbar>
     <ui-view
-      class="container container-lg container-md container-sm container-xl container-xxl w-100"
+      class="container container-lg container-md container-sm container-xl container-xxl"
     ></ui-view>
     <ui-footer class="align-self-stretch"></ui-footer>
   </body>

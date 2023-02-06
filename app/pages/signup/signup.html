@@ -1,7 +1,7 @@
 <aside class="_container">
   <div class="description">
     <span>
-      <img src="{{CheckIcon}}" alt="" />
+      <img ng-src="{{SignUpCtrl.CheckIcon}}" alt="" />
       Project Management App
     </span>
     <h1 class="text-break">Everything you need in one place</h1>
@@ -11,7 +11,7 @@
   </div>
 
   <div class="form__container">
-    <form id="LoginForm" class="form">
+    <form id="LoginForm" class="form" ng-submit="SignUpCtrl.signUp()">
       <span class="heading">Sign up</span>
 
       <div class="form-group">
@@ -22,7 +22,7 @@
           type="text"
           placeholder="Enter your name..."
           class="bg-dark text-light form-control"
-          required
+          ng-model="SignUpCtrl.name"
         />
       </div>
 
@@ -34,7 +34,7 @@
           type="text"
           placeholder="Enter your username..."
           class="bg-dark text-light form-control"
-          required
+          ng-model="SignUpCtrl.username"
         />
       </div>
 
@@ -46,6 +46,7 @@
           type="password"
           placeholder="Enter your password..."
           class="bg-dark text-light form-control"
+          ng-model="SignUpCtrl.password"
         />
       </div>
 

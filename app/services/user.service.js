@@ -1,11 +1,19 @@
 (function () {
   "use strict";
 
-  angular.module("app").service("UserService", function ($http) {
-    var service = this;
-    var users = {};
+  const app = angular.module("app");
 
-    $http.get("data/users.json").then((response) => (users = response.data));
+  app.service("UserService", UserService);
+
+  UserService.$inject = ["$http"];
+
+  function UserService($http) {
+    var service = this;
+    var users = [];
+
+    $http.get("data/users.json").then((response) => {
+      users = response.data.users;
+    });
 
     service.findUser = function (username, password) {
       return users.find(function (user) {
@@ -14,23 +22,14 @@
     };
 
     service.addUser = function (user) {
-      users.push(user);
-      $http({
-        method: "POST",
-        url: "localhost:3000/data/users.json",
-        data: user,
-      });
-      return $http.put("data/users.json", users);
+      $http
+        .post("http://localhost:3000/users", JSON.stringify(user))
+        .then(function (response) {
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
     };
-
-    service.deleteUser = function (user) {
-      return service.getUsers().then(function (data) {
-        var index = data.indexOf(user);
-        if (index > -1) {
-          data.splice(index, 1);
-        }
-        return $http.put("data/users.json", users);
-      });
-    };
-  });
+  }
 })();

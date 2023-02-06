@@ -1,4 +1,5 @@
 .slider {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +13,7 @@
   z-index: 0;
   content: "";
   top: 0;
-  left: -90%;
+  left: -80%;
   width: 100%;
   height: 100%;
   mix-blend-mode: soft-light;
@@ -25,9 +26,9 @@
 .slider::after {
   background: linear-gradient(180deg, #ff6161 0%, #43ffdd 35.88%, #45bcff 67.65%, #d795ff 100%);
   position: absolute;
-  top: 0%;
-  right: -80%;
   content: "";
+  top: 0%;
+  right: -70%;
   z-index: 0;
   width: 100%;
   height: 100%;

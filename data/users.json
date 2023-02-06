@@ -1,23 +1,25 @@
-[
-    {
-        "id": 1,
-        "name": "RinnTuna",
-        "username": "rin",
-        "password": "123",
-        "image": "https://i.pinimg.com/originals/1a/d7/dc/1ad7dcf5167a9f01ee00b6f773c56280.jpg"
-    },
-    {
-        "id": 2,
-        "name": "YuutaTuan",
-        "username": "Sae",
-        "password": "123",
-        "image": "https://i.pinimg.com/originals/1a/d7/dc/1ad7dcf5167a9f01ee00b6f773c56280.jpg"
-    },
-    {
-        "id": 3,
-        "name": "KhoiBao",
-        "username": "khoi",
-        "password": "123",
-        "image": "https://i.pinimg.com/originals/1a/d7/dc/1ad7dcf5167a9f01ee00b6f773c56280.jpg"
-    }
-]
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "RinnTuna",
+            "username": "rin",
+            "password": "123",
+            "image": "https://i.pinimg.com/originals/1a/d7/dc/1ad7dcf5167a9f01ee00b6f773c56280.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Yuuta",
+            "username": "yuu",
+            "password": "123",
+            "image": "https://i.pinimg.com/originals/1a/d7/dc/1ad7dcf5167a9f01ee00b6f773c56280.jpg"
+        },
+        {
+            "id": 3,
+            "name": "KhoiBao",
+            "username": "khoi",
+            "password": "123",
+            "image": "https://i.pinimg.com/originals/1a/d7/dc/1ad7dcf5167a9f01ee00b6f773c56280.jpg"
+        }
+    ]
+}

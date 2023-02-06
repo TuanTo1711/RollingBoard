@@ -10,11 +10,11 @@
       const vm = this;
 
       init();
-      vm.isAuthenticated = AuthService.isAuthenticated;
-      vm.logout = AuthService.logout;
 
       function init() {
         vm.Logo = "app/assets/icon/favicon.svg";
+        vm.isAuthenticated = AuthService.isAuthenticated;
+        vm.logout = AuthService.logout;
       }
     }
 
