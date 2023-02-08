@@ -2,6 +2,7 @@
 @import url("pages/error/error.styles.css");
 @import url("pages/login/login.styles.css");
 @import url("pages/about/about.styles.css");
+@import url("pages/board/board.styles.css");
 *,
 ::after,
 ::before {

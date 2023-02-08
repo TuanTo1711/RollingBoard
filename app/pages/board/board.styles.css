@@ -1,0 +1,9 @@
+.boards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+}
+.boards-heading {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=board.styles.css.map */

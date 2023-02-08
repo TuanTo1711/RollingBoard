@@ -16,7 +16,11 @@
     }
 
     function signUp() {
-      AuthService.signup({ FormData });
+      AuthService.signup({
+        name: ctrl.name,
+        username: ctrl.username,
+        password: ctrl.password,
+      });
     }
   }
 })();
