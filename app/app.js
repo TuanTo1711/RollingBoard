@@ -50,6 +50,12 @@
         controller: "ErrorController",
         controllerAs: "ErrorCtrl",
       });
+
+
+      
     $urlRouterProvider.otherwise("/");
+
+
   }
+
 })();

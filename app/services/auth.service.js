@@ -11,6 +11,7 @@
     this.logout = logout;
     this.signup = signup;
 
+    
     function signup(form) {
       console.log(form);
     }
