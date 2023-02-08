@@ -1,9 +1,29 @@
-.boards {
+.projects {
   display: flex;
   flex-direction: column;
   row-gap: 80px;
+  margin-bottom: 80px;
 }
-.boards-heading {
+.projects-heading {
   display: flex;
   justify-content: space-between;
+}
+.projects-cards {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.projects-cards-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  row-gap: 20px;
+  border-radius: 17px;
+  padding: 30px 20px 60px;
+  width: 295px;
+  height: 260px;
 }/*# sourceMappingURL=board.styles.css.map */

@@ -37,6 +37,19 @@
         controllerAs: "SignUpCtrl",
       })
 
+      .state("price", {
+        url: "/price",
+        templateUrl: "app/pages/price/price.html",
+        controller: "PriceController",
+        controllerAs: "PriceCtrl",
+      })
+      .state("resetpassword", {
+        url: "/resetpassword",
+        templateUrl: "app/pages/reset_password/reset_password.html",
+        controller: "RSPWController",
+        controllerAs: "RSPWCtrl",
+      })
+
       .state("board", {
         url: "/board",
         templateUrl: "app/pages/board/board.html",
@@ -51,11 +64,6 @@
         controllerAs: "ErrorCtrl",
       });
 
-
-      
     $urlRouterProvider.otherwise("/");
-
-
   }
-
 })();

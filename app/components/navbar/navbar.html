@@ -21,13 +21,17 @@
       </a>
       <ul class="navbar-nav flex-row justify-content-between">
         <li class="nav-item" ng-if="vm.isAuthenticated()" role="button">
-          <a role="button" class="nav-link p-md-3 p-sm-2"> Projects </a>
+          <a ui-sref="board" role="button" class="nav-link p-md-3 p-sm-2">
+            Projects
+          </a>
         </li>
         <li class="nav-item" ng-if="vm.isAuthenticated()" role="button">
           <a role="button" class="nav-link p-md-3 p-sm-2"> Profile </a>
         </li>
         <li class="nav-item" ng-if="vm.isAuthenticated()" role="button">
-          <a role="button" class="nav-link p-md-3 p-sm-2" ui-sref="error"> Search </a>
+          <a role="button" class="nav-link p-md-3 p-sm-2" ui-sref="error">
+            Search
+          </a>
         </li>
         <li class="nav-item" role="button">
           <a role="button" class="nav-link p-md-3 p-sm-2" ui-sref="about">
