@@ -1,0 +1,112 @@
+<div class="projects">
+  <div class="projects-heading mt-5">
+    <h2 class="title">Projects({{ProjectCtrl.boards.length}})</h2>
+    <input
+      type="text"
+      class="form-control bg-dark text-light border-secondary"
+      placeholder="Search"
+    />
+    <i
+      class="fa fa-search position-absolute"
+      style="top: 14px; right: 16px"
+      aria-hidden="true"
+    ></i>
+  </div>
+  <div class="projects-cards">
+    <div
+      ng-repeat="item in ProjectCtrl.boards"
+      class="projects-cards-card shadow"
+      ng-style="{ 'background-image': '{{item.bg}}' }"
+    >
+      <button
+        type="button"
+        class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+        aria-label="Close"
+      ></button>
+
+      <h5>{{item.title}}</h5>
+      <span class="text-muted">{{item.description}}</span>
+
+      <div class="card-control">
+        <a
+          ui-sref="board({name: '{{item.title | lowercase}}'})"
+          class="btn btn-secondary"
+        >
+          Open Board
+        </a>
+        <button class="btn btn-secondary">Edit</button>
+      </div>
+    </div>
+
+    <div class="projects-cards-card">
+      <button
+        type="button"
+        data-bs-toggle="modal"
+        href="#createBoard"
+        class="btn btn-outline text-light border-0"
+      >
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        <h5 class="d-inline">Create Board</h5>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="createBoard"
+  aria-hidden="true"
+  aria-labelledby="createBoardLabel"
+  tabindex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div
+      class="modal-content text-light container"
+      style="
+        background: #101113;
+        border: 1px solid #343a40;
+        border-radius: 17px;
+      "
+    >
+      <div class="text-end">
+        <button
+          type="button"
+          class="btn-close btn-close-white mt-3 me-2"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <form class="container w-100 p-5">
+        <span class="mb-5 h3">Create Board</span>
+        <div class="mt-4">
+          <label for="nameBoard" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control border-light bg-dark text-light"
+            id="nameBoard"
+            ng-model="ProjectCtrl.titleBoard"
+          />
+        </div>
+        <div class="mt-3">
+          <label for="descriptionBoard" class="form-label">Description</label>
+          <input
+            type="text"
+            class="form-control border-light bg-dark text-light"
+            id="descriptionBoard"
+            ng-model="ProjectCtrl.descriptionBoard"
+          />
+        </div>
+        <div class="text-center mt-3">
+          <button
+            ng-click="ProjectCtrl.addItem(ProjectCtrl.titleBoard, ProjectCtrl.descriptionBoard)"
+            type="submit"
+            class="btn btn-dark mt-3"
+          >
+            Accept Changes
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -45,7 +45,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   max-width: 500px;
@@ -73,7 +72,35 @@
   line-height: 155%;
 }
 ._container .form__container .form .form-group {
+  position: relative;
   align-self: stretch;
+}
+._container .form__container .form .form-group i.fa-check-circle,
+._container .form__container .form .form-group i.fa-exclamation-circle {
+  visibility: hidden;
+  position: absolute;
+  top: 22px;
+  right: 16px;
+}
+._container .form__container .form .form-group.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+._container .form__container .form .form-group.invalid i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+._container .form__container .form .form-group.invalid .form-message {
+  color: #f33a58;
+}
+._container .form__container .form .form-group.invalid .input-group {
+  border-color: #e74c3c;
+}
+._container .form__container .form .form-group.invalid .form-message {
+  color: #f33a58;
+}
+._container .form__container .form .form-control:hover {
+  border-color: #1dbfaf;
 }
 ._container .form__container .form .form-label {
   text-align: left;

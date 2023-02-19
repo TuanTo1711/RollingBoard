@@ -1,0 +1,49 @@
+.offcanvas-header {
+  background-color: #000;
+}
+.offcanvas-header_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  min-height: 202px;
+}
+.offcanvas-header_effect {
+  position: absolute;
+  content: "";
+  width: 500px;
+  height: 500px;
+  z-index: 1;
+  left: -250px;
+  top: -400px;
+  background: linear-gradient(460deg, #ff6161 0%, #43ffdd 35.88%, #45bcff 67.65%, #d795ff 100%);
+  filter: blur(50px);
+  border-radius: 50%;
+}
+.offcanvas-header_content {
+  display: flex;
+  align-items: end;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  row-gap: 16px;
+}
+.accordion-body-item {
+  width: 100%;
+  background: #25262b;
+  border-radius: 6px;
+  padding: 8px 16px;
+}
+.accordion-body-item h6 {
+  font-size: 16px;
+}
+.accordion-body-item span {
+  font-size: 14px;
+}/*# sourceMappingURL=offcanvas.styles.css.map */

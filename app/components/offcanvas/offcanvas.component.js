@@ -9,13 +9,29 @@
       init();
 
       function init() {
+        vm.defaultAvatar = "app/assets/img/Avatar.png";
         vm.logout = logout;
+        vm.getFile = getFile;
+        vm.user = JSON.parse(localStorage.getItem("userLoged"));
+        // console.log(vm.user);
+      }
+
+      function getFile() {
+        var file = vm.selectedFile;
+        if (file) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            vm.$apply(function () {
+              vm.imageUrl = URL.createObjectURL(file);
+            });
+          };
+          reader.readAsDataURL(file);
+        }
       }
 
       function logout() {
-        console.log(true);
+        AuthService.logout();
         $state.go("home");
-        return AuthService.logout();
       }
     }
 

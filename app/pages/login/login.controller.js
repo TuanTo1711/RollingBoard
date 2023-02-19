@@ -3,9 +3,9 @@
 
   angular.module("app").controller("LoginController", LoginController);
 
-  LoginController.$inject = ["$state", "AuthService"];
+  LoginController.$inject = ["$state", "AuthService", "Validator"];
 
-  function LoginController($state, AuthService) {
+  function LoginController($state, AuthService, Validator) {
     const ctrl = this;
 
     init();
@@ -13,13 +13,24 @@
     function init() {
       ctrl.CheckIcon = "app/assets/icon/Check.svg";
       ctrl.login = login;
-      ctrl.validate = validate;
+      ctrl.validate = Validator.validation({
+        form: "#LoginForm",
+        formGroupSelector: ".form-group",
+        errorSelector: ".form-message",
+        rules: [
+          Validator.isRequired("#username", "Khong duoc de trong"),
+          Validator.isRequired("#password", "Khong duoc de trong"),
+        ],
+        //call API
+        onSubmit: function (data) {
+          console.log(data);
+        },
+      });
     }
 
     function login() {
       AuthService.login(this.username, this.password)
         .then(function (response) {
-          console.log(response);
           if (response) {
             $state.go("home");
           }
@@ -28,7 +39,5 @@
           console.log(error);
         });
     }
-
-    function validate(form) {}
   }
 })();

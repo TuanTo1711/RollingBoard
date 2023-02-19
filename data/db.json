@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "RinnTuna",
+      "username": "rin",
+      "password": "123",
+      "image": "https://i.pinimg.com/originals/1a/d7/dc/1ad7dcf5167a9f01ee00b6f773c56280.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Yuuta",
+      "username": "yuu",
+      "password": "123",
+      "image": "https://i.pinimg.com/originals/1a/d7/dc/1ad7dcf5167a9f01ee00b6f773c56280.jpg"
+    },
+    {
+      "id": 3,
+      "name": "KhoiBao",
+      "username": "khoi",
+      "password": "123",
+      "image": "https://i.pinimg.com/originals/1a/d7/dc/1ad7dcf5167a9f01ee00b6f773c56280.jpg"
+    }
+  ],
+  "boards": [
+    {
+      "id": 1,
+      "title": "Package",
+      "description": "Sets targets and objectives and actively works towards them, whilst raising the quality of the outcomes.",
+      "bg": "linear-gradient(180deg, #320606 0%, rgba(19, 5, 5, 0) 100%)"
+    },
+    {
+      "id": 2,
+      "title": "Deals app",
+      "description": "Goes out of their way to help the physical, mental, or emotional pains of another and themselves.",
+      "bg": "linear-gradient(180deg, #321E06 0%, rgba(19, 5, 5, 0) 100%)"
+    },
+    {
+      "id": 3,
+      "title": "Brochure products",
+      "description": "Conscious and aware of their own character, feelings and behaviour. ",
+      "bg": "linear-gradient(180deg, #063218 0%, rgba(19, 5, 5, 0) 100%)"
+    },
+    {
+      "id": 4,
+      "title": "Static printing",
+      "description": "Do what they say and say what they do. They bring their whole self to work.",
+      "bg": "linear-gradient(180deg, #320630 0%, rgba(19, 5, 5, 0) 100%)"
+    },
+    {
+      "id": 5,
+      "title": "Article",
+      "description": "Accepts and craves responsibility; owns their actions and commits to get things done.",
+      "bg": "linear-gradient(180deg, #091C43 0%, rgba(16, 17, 19, 0) 100%)"
+    },
+    {
+      "id": 6,
+      "title": "Social advertising",
+      "description": "Assess and initiate things with minimal direction or guidance. ",
+      "bg": "linear-gradient(180deg, #09201E 0%, rgba(16, 17, 19, 0) 100%)"
+    },
+    {
+      "id": 7,
+      "title": "OLO",
+      "description": "Can be trusted and counted on to deliver quality outcomes.",
+      "bg": "linear-gradient(180deg, #191D09 0%, rgba(16, 17, 19, 0) 100%)"
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Package",
+      "columns": [
+        {
+          "name": "Backlog",
+          "items": [
+            "Proof of Concept",
+            "Regression Test",
+            "Set up Monitoring and Controlling processes",
+            "Requirements Analysis Completed"
+          ]
+        },
+        {
+          "name": "To do",
+          "items": [
+            "Final Check",
+            "Desktop Publishing",
+            "Linguistic Review"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Deals app",
+      "columns": [
+        {
+          "name": "Backlog",
+          "items": [
+            "Proof of Concept",
+            "Regression Test",
+            "Set up Monitoring and Controlling processes",
+            "Requirements Analysis Completed"
+          ]
+        },
+        {
+          "name": "To do",
+          "items": [
+            "Final Check",
+            "Desktop Publishing",
+            "Linguistic Review"
+          ]
+        }
+      ]
+    }
+  ]
+}

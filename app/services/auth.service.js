@@ -11,9 +11,8 @@
     this.logout = logout;
     this.signup = signup;
 
-    
     function signup(form) {
-      console.log(form);
+      UserService.addUser(form);
     }
 
     function login(username, password) {
@@ -22,25 +21,26 @@
       var data = UserService.findUser(username, password);
 
       if (data) {
-        sessionStorage.setItem("userLoged", JSON.stringify(data));
-        sessionStorage.setItem("isAuthenticated", true);
-        deferred.resolve(sessionStorage.getItem("isAuthenticated"));
+        localStorage.setItem("userLoged", JSON.stringify(data));
+        localStorage.setItem("isAuthenticated", true);
+        deferred.resolve(localStorage.getItem("isAuthenticated"));
       } else {
         deferred.reject({
           state: "Error",
           message: "Invalid username or password",
         });
       }
+      console.log(localStorage.getItem("userLoged"));
 
       return deferred.promise;
     }
 
     function logout() {
-      sessionStorage.removeItem("isAuthenticated");
+      localStorage.clear();
     }
 
     this.isAuthenticated = function () {
-      return sessionStorage.getItem("isAuthenticated") === "true";
+      return localStorage.getItem("isAuthenticated") === "true";
     };
 
     return this;

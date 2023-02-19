@@ -11,8 +11,8 @@
     var service = this;
     var users = [];
 
-    $http.get("data/users.json").then((response) => {
-      users = response.data.users;
+    $http.get("http://localhost:3000/users").then((response) => {
+      users = response.data;
     });
 
     service.findUser = function (username, password) {
@@ -30,6 +30,12 @@
         .catch(function (error) {
           console.error(error);
         });
+    };
+
+    service.deleteUser = function (ID) {
+      $http.delete(`http://localhost:3000/users/${ID}`).then((res) => {
+        console.log(res.data);
+      });
     };
   }
 })();

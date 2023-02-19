@@ -1,145 +1,60 @@
-<div class="projects">
-  <h2 class="projects-heading mt-5">Projects(7)</h2>
-  <div class="projects-cards">
-    <div
-      class="projects-cards-card"
-      style="
-        background: linear-gradient(180deg, #320606 0%, rgba(19, 5, 5, 0) 100%);
-      "
+<div class="board" ng-repeat="task in BoardCtrl.tasks">
+  <div class="board__heading">
+    <a
+      ui-sref="project"
+      type="button"
+      class="link-light text-decoration-none board__heading-name"
     >
-      <h5>Package</h5>
-      <span class="text-muted"
-        >Sets targets and objectives and actively works towards them, whilst
-        raising the quality of the outcomes.
-      </span>
-
-      <div class="visually-unset" style="visibility: unset">
-        <button class="btn btn-secondary">Open Board</button>
-        <button class="btn btn-secondary">Edit</button>
-      </div>
-    </div>
-
-    <div
-      class="projects-cards-card"
-      style="
-        background: linear-gradient(180deg, #321e06 0%, rgba(19, 5, 5, 0) 100%);
-      "
-    >
-      <h5>Deals app</h5>
-      <span class="text-muted">
-        Goes out of their way to help the physical, mental, or emotional pains
-        of another and themselves.
-      </span>
-
-      <div class="visually-hidden">
-        <button class="btn btn-secondary">Open Board</button>
-        <button class="btn btn-secondary">Edit</button>
-      </div>
-    </div>
-
-    <div
-      class="projects-cards-card"
-      style="
-        background: linear-gradient(180deg, #063218 0%, rgba(19, 5, 5, 0) 100%);
-      "
-    >
-      <h5>Brochure products</h5>
-      <span class="text-muted">
-        Conscious and aware of their own character, feelings and behaviour.
-      </span>
-
-      <div class="visually-hidden">
-        <button class="btn btn-secondary">Open Board</button>
-        <button class="btn btn-secondary">Edit</button>
-      </div>
-    </div>
-
-    <div
-      class="projects-cards-card"
-      style="
-        background: linear-gradient(180deg, #320630 0%, rgba(19, 5, 5, 0) 100%);
-      "
-    >
-      <h5>Package</h5>
-      <span class="text-muted">
-        Do what they say and say what they do. They bring their whole self to
-        work.
-      </span>
-
-      <div class="visually-hidden">
-        <button class="btn btn-secondary">Open Board</button>
-        <button class="btn btn-secondary">Edit</button>
-      </div>
-    </div>
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      <h1>{{task.title}}</h1>
+    </a>
+    <h6 class="text-muted">
+      Sets targets and objectives and actively works towards them, whilst
+      raising the quality of the outcomes.
+    </h6>
   </div>
-
-  <div class="projects-cards">
-    <div
-      class="projects-cards-card"
-      style="
-        background: linear-gradient(
-          180deg,
-          #091c43 0%,
-          rgba(16, 17, 19, 0) 100%
-        );
-      "
-    >
-      <h5>Article</h5>
-      <span class="text-muted">
-        Accepts and craves responsibility; owns their actions and commits to get
-        things done.
-      </span>
-
-      <div class="visually-hidden">
-        <button class="btn btn-secondary">Open Board</button>
-        <button class="btn btn-secondary">Edit</button>
+  <div class="board__content">
+    <div class="col" ng-repeat="column in task.columns">
+      <div class="col-input">
+        <input
+          class="border-0 text-light w-100"
+          type="text"
+          placeholder=""
+          value="{{column.name}}"
+        />
+        <button
+          type="button"
+          class="btn-close btn-close-white align-self-center"
+          aria-label="Close"
+        ></button>
       </div>
+      <div
+        class="col-items list"
+        ng-repeat="item in column.items"
+        dnd-list="column.items"
+      >
+        <div
+          dnd-draggable="item"
+          dnd-moved="list.items.splice($index, 1)"
+          dnd-effect-allowed="move"
+          dnd-selected="selected = item"
+          ng-class="{selected: selected === item}"
+          class="to-do-item"
+        >
+          {{item}}
+        </div>
+      </div>
+
+      <button class="btn text-light text-start">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        Add Task
+      </button>
     </div>
 
-    <div
-      class="projects-cards-card"
-      style="
-        background: linear-gradient(
-          180deg,
-          #09201e 0%,
-          rgba(16, 17, 19, 0) 100%
-        );
-      "
-    >
-      <h5>Social advertising</h5>
-      <span class="text-muted">
-        Assess and initiate things with minimal direction or guidance.
-      </span>
-
-      <div class="visually-hidden">
-        <button class="btn btn-secondary">Open Board</button>
-        <button class="btn btn-secondary">Edit</button>
-      </div>
-    </div>
-
-    <div
-      class="projects-cards-card"
-      style="
-        background: linear-gradient(
-          180deg,
-          #191d09 0%,
-          rgba(16, 17, 19, 0) 100%
-        );
-      "
-    >
-      <h5>OLO</h5>
-      <span class="text-muted">
-        Can be trusted and counted on to deliver quality outcomes.
-      </span>
-
-      <div class="visually-hidden">
-        <button class="btn btn-secondary">Open Board</button>
-        <button class="btn btn-secondary">Edit</button>
-      </div>
-    </div>
-    <div class="projects-cards-card">
-      <button type="button" class="btn btn-outline text-light border-0">
-        + Create Board
+    <div class="col">
+      <button class="btn text-light">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        Add Task
       </button>
     </div>
   </div>

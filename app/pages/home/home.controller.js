@@ -3,9 +3,9 @@
 
   angular.module("app").controller("HomeController", HomeController);
 
-  HomeController.$inject = ["$scope"];
+  HomeController.$inject = ["$scope", "AuthService"];
 
-  function HomeController($scope) {
+  function HomeController($scope, AuthService) {
     var ctrl = $scope;
 
     init();
@@ -18,6 +18,8 @@
       ctrl.ProjectOverview = "app/assets/icon/ProjectOverview.svg";
       ctrl.PackageOverview = "app/assets/icon/PackageOverview.svg";
       ctrl.SignUpOverview = "app/assets/icon/SignUpOverview.svg";
+
+      ctrl.ButtonLink = AuthService.isAuthenticated() ? "project" : "login";
     }
   }
 })();

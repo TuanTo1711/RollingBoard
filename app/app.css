@@ -2,8 +2,10 @@
 @import url("pages/error/error.styles.css");
 @import url("pages/login/login.styles.css");
 @import url("pages/about/about.styles.css");
-@import url("pages/board/board.styles.css");
+@import url("pages/project/project.styles.css");
 @import url("pages/price/price.styles.css");
+@import url("components/offcanvas/offcanvas.styles.css");
+@import url("pages/board/board.styles.css");
 *,
 ::after,
 ::before {
@@ -47,28 +49,4 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: #000;
   opacity: 1;
   border-bottom: 1px solid #25262b;
-}
-
-.offcanvas-header {
-  background-color: #000;
-}
-.offcanvas-header_wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  flex: 1 1 auto;
-  min-height: 202px;
-}
-.offcanvas-header_effect {
-  position: absolute;
-  content: "";
-  width: 500px;
-  height: 500px;
-  z-index: 1;
-  left: -250px;
-  top: -400px;
-  background: linear-gradient(460deg, #ff6161 0%, #43ffdd 35.88%, #45bcff 67.65%, #d795ff 100%);
-  filter: blur(50px);
-  border-radius: 50%;
 }/*# sourceMappingURL=app.css.map */

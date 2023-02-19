@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const app = angular.module("app", ["ui.router"]);
+  const app = angular.module("app", ["ui.router", "dndLists"]);
 
   app.config(routerConfig);
 
@@ -46,12 +46,17 @@
       .state("resetpassword", {
         url: "/resetpassword",
         templateUrl: "app/pages/reset_password/reset_password.html",
-        controller: "RSPWController",
-        controllerAs: "RSPWCtrl",
+      })
+
+      .state("project", {
+        url: "/project",
+        templateUrl: "app/pages/project/project.html",
+        controller: "ProjectController",
+        controllerAs: "ProjectCtrl",
       })
 
       .state("board", {
-        url: "/board",
+        url: "/board/:name",
         templateUrl: "app/pages/board/board.html",
         controller: "BoardController",
         controllerAs: "BoardCtrl",

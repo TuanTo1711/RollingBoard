@@ -4,10 +4,11 @@
     "jquery": "^3.6.3"
   },
   "dependencies": {
-    "@faker-js/faker": "^7.6.0",
     "@fortawesome/fontawesome-free": "^6.2.1",
+    "angular-drag-and-drop-lists": "^2.1.0",
     "angular-ui-router": "^1.0.3",
     "bootstrap": "^5.2.3",
+    "dragula": "^3.7.3",
     "json-server": "^0.17.1"
   },
   "name": "project_management-app",
@@ -15,8 +16,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "json-server --watch ./data/users.json"
+    "start": "json-server -w ./data/db.json"
   },
   "repository": {
     "type": "git",

@@ -1,29 +1,54 @@
-.projects {
+.board {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   row-gap: 80px;
   margin-bottom: 80px;
 }
-.projects-heading {
+.board__heading-name {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
-.projects-cards {
+.board__content {
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  gap: 20px;
 }
-.projects-cards-card {
+.board__content .col {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  row-gap: 20px;
-  border-radius: 17px;
-  padding: 30px 20px 60px;
-  width: 295px;
-  height: 260px;
+  background: #141517;
+  padding: 10px;
+  gap: 10px;
+  width: 296px;
+  border: 1px solid #343a40;
+  border-radius: 8px;
+}
+.board__content .col-input {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.board__content .col-input input {
+  background: none;
+  padding: 4px 12px;
+}
+.board__content .col-input input:focus {
+  border: 1px solid #343a40;
+  border-radius: 4px;
+}
+.board__content .col-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+.board__content .col-items .to-do-item {
+  cursor: move;
+  padding: 12px 20px;
+  background: #25262b;
+  border-radius: 7px;
 }/*# sourceMappingURL=board.styles.css.map */

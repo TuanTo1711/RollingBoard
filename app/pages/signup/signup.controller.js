@@ -3,9 +3,9 @@
 
   angular.module("app").controller("SignUpController", SignUpController);
 
-  SignUpController.$inject = ["AuthService"];
+  SignUpController.$inject = ["AuthService", "Validator"];
 
-  function SignUpController(AuthService) {
+  function SignUpController(AuthService, Validator) {
     const ctrl = this;
 
     init();
@@ -16,10 +16,19 @@
     }
 
     function signUp() {
-      AuthService.signup({
-        name: ctrl.name,
-        username: ctrl.username,
-        password: ctrl.password,
+      Validator.validation({
+        form: "#SignUpForm",
+        formGroupSelector: ".form-group",
+        errorSelector: ".form-message",
+        rules: [
+          Validator.isRequired("#name", ""),
+          Validator.isRequired("#usernameSignUp", ""),
+          Validator.isRequired("#passwordSignUp", ""),
+        ],
+        onSubmit: function (data) {
+          console.log(data);
+          AuthService.signup(data);
+        },
       });
     }
   }
