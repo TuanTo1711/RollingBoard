@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const app = angular.module("app", ["ui.router", "dndLists"]);
+  const app = angular.module("app", ["ui.router", "dndLists", "ngResource"]);
 
   app.config(routerConfig);
 

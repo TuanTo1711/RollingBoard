@@ -2,9 +2,9 @@
   "use strict";
 
   angular.module("app").component("offcanvas", offcanvas());
-  offcanvas.$inject = ["$state", "AuthService"];
+  offcanvas.$inject = ["$state", "AuthService", "UserService"];
   function offcanvas() {
-    function offcanvasController($state, AuthService) {
+    function offcanvasController($state, AuthService, UserService) {
       var vm = this;
       init();
 
@@ -13,7 +13,7 @@
         vm.logout = logout;
         vm.getFile = getFile;
         vm.user = JSON.parse(localStorage.getItem("userLoged"));
-        // console.log(vm.user);
+        vm.changeProfile = changeProfile;
       }
 
       function getFile() {
@@ -27,6 +27,11 @@
           };
           reader.readAsDataURL(file);
         }
+      }
+
+      function changeProfile(user) {
+        console.log(user);
+        UserService.update(user);
       }
 
       function logout() {

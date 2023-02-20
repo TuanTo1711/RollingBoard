@@ -37,5 +37,19 @@
         console.log(res.data);
       });
     };
+
+    service.update = function (user) {
+      $http
+        .put(`http://localhost:3000/users/${user.id}`, JSON.stringify(user))
+        .then(
+          function (response) {
+            console.log(response);
+            console.log("Data updated successfully!");
+          },
+          function (error) {
+            console.error("Error occurred while updating data:", error);
+          }
+        );
+    };
   }
 })();

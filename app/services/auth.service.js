@@ -21,26 +21,26 @@
       var data = UserService.findUser(username, password);
 
       if (data) {
-        localStorage.setItem("userLoged", JSON.stringify(data));
-        localStorage.setItem("isAuthenticated", true);
-        deferred.resolve(localStorage.getItem("isAuthenticated"));
+        sessionStorage.setItem("userLoged", JSON.stringify(data));
+        sessionStorage.setItem("isAuthenticated", true);
+        deferred.resolve(sessionStorage.getItem("isAuthenticated"));
       } else {
         deferred.reject({
           state: "Error",
           message: "Invalid username or password",
         });
       }
-      console.log(localStorage.getItem("userLoged"));
+      console.log(sessionStorage.getItem("userLoged"));
 
       return deferred.promise;
     }
 
     function logout() {
-      localStorage.clear();
+      sessionStorage.clear();
     }
 
     this.isAuthenticated = function () {
-      return localStorage.getItem("isAuthenticated") === "true";
+      return sessionStorage.getItem("isAuthenticated") === "true";
     };
 
     return this;
